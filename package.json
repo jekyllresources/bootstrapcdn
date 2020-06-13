@@ -15,7 +15,7 @@
     "lockfile-lint": "lockfile-lint --allowed-hosts npm --allowed-schemes https: --empty-hostname false --type npm --path package-lock.json",
     "lint": "npm-run-all --continue-on-error --parallel lockfile-lint xo puglint",
     "mocha": "cross-env NODE_ENV=test ENABLE_CRAWLING=true mocha",
-    "mocha:only-functional": "npm run mocha -- --reporter progress ./test/functional_test.js",
+    "mocha:only-functional": "npm run mocha -- ./test/functional_test.js",
     "mocha:only-functional:dev": "cross-env BCDN_HEADERS=debug npm run mocha:only-functional",
     "mocha:only-functional:prod": "cross-env BCDN_HEADERS=production npm run mocha:only-functional",
     "mocha:no-functional": "npm run mocha -- --invert --grep \"functional\"",
